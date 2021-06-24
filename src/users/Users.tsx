@@ -20,7 +20,7 @@ export const Users = () => {
                return <User key={u.id} user={u}/>
             })}
             <Paginator />
-            <DataUser />
+            <DataUser  />
         </div>
     );
 };

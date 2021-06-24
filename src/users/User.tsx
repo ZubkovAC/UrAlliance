@@ -2,7 +2,6 @@ import React from 'react';
 import {UserType} from "../api/axios";
 import {useDispatch} from "react-redux";
 import {UserDataTC} from "../redux/usersReducer";
-import {DataUser} from "../dataUser/DataUser";
 
 type UserPropsType = {
     user: UserType
@@ -23,7 +22,6 @@ export const User = (props: UserPropsType) => {
             <div>{props.user.email}</div>
             <div>{props.user.id}</div>
             <button onClick={()=>userLoader(props.user.id)}>data</button>
-            <DataUser  />
         </div>
     );
 };

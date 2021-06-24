@@ -2,6 +2,7 @@
 
 import axios from "axios";
 
+
 const instance = axios.create({
     baseURL:'https://reqres.in/api/',
     // withCredentials:true
@@ -13,6 +14,9 @@ export const UsersAPI = {
     },
     dataUser(rageUser:number){
         return instance.get<UserDataType>(`users/${rageUser}`)
+    },
+    singleResource(id:number){
+        return instance.get<SingleResourceType>(`unknown/${id}`)
     }
 }
 
@@ -37,4 +41,12 @@ export type UserDataType={
         url:string
         text:string
     }
+}
+
+export type  SingleResourceType = {
+    id: number
+    name: string
+    year: number
+    color: string
+    pantone_value: string
 }
