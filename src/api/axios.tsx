@@ -16,7 +16,7 @@ export const UsersAPI = {
         return instance.get<UserDataType>(`users/${rageUser}`)
     },
     singleResource(id:number){
-        return instance.get<SingleResourceType>(`unknown/${id}`)
+        return instance.get<SingleResourceResponceType>(`unknown/${id}`)
     }
 }
 
@@ -41,6 +41,9 @@ export type UserDataType={
         url:string
         text:string
     }
+}
+type SingleResourceResponceType ={
+    data:SingleResourceType
 }
 
 export type  SingleResourceType = {

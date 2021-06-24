@@ -5,6 +5,7 @@ import {Header} from "./header/Header";
 import {Footer} from "./footer/Footer";
 import {useDispatch} from "react-redux";
 import {GetUsersTC} from "./redux/usersReducer";
+import {SingleData} from "./SIngleData/SingleData";
 
 // react, redux, api, visualbuilder, ant design, bootstrap
 
@@ -19,6 +20,7 @@ function App() {
     <div className="App">
         <Header/>
         <Users/>
+        <SingleData />
         <Footer/>
     </div>
   );

@@ -9,7 +9,8 @@ const initialStateUsers = {
     total: 0,
     total_pages: 0,
     userData:{} as UserType,
-    switch:false
+    switch:false,
+    userId:0
 }
 
 type InitialStateUsers = typeof initialStateUsers
@@ -28,7 +29,8 @@ export const usersReducer = (state: InitialStateUsers = initialStateUsers, actio
         case "users/DATA_USER":
             return{
                 ...state,
-                userData:action.data
+                userData:action.data,
+                userId:action.data.id
             }
         case "users/MENU_USER":
             return {
